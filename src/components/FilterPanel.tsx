@@ -31,8 +31,8 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
     <div className="bg-white p-4 border-b border-gray-200 space-y-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <Filter className="w-5 h-5 text-gray-500" />
-          <h2 className="text-lg font-semibold text-gray-900">Filters</h2>
+          <Filter className="w-5 h-5 text-primary" />
+          <h2 className="text-lg font-bold text-primary">Filters</h2>
         </div>
         {hasActiveFilters && (
           <button
@@ -56,7 +56,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             State
@@ -88,12 +88,6 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
             ))}
           </select>
         </div>
-      </div>
-
-      <div className="flex items-center justify-between pt-2 border-t border-gray-100">
-        <span className="text-sm text-gray-600">
-          {jobCount} {jobCount === 1 ? 'opportunity' : 'opportunities'} found
-        </span>
       </div>
     </div>
   );
